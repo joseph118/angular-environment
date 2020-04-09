@@ -1,5 +1,7 @@
 {
   "port": 8000,
+  "ghostMode": false,
+  "watchTask": true,
   "files": [
     "./src/**/*.{html,htm,css,js}"
   ],
