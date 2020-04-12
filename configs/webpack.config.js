@@ -1,4 +1,5 @@
 const WebpackNotifierPlugin = require('webpack-notifier');
+const BrowserSyncPlugin = require('browser-sync-webpack-plugin')
 
 module.exports = {
   module: {
@@ -30,7 +31,15 @@ module.exports = {
   plugins: [
     new WebpackNotifierPlugin({
       alwaysNotify: true,
-      title: 'Webpack PostCSS'
+      skipFirstNotification: true,
+      title: 'Webpack with BrowserSync'
     }),
+    new BrowserSyncPlugin({
+      host: 'localhost',
+      port: 3000,
+      proxy: 'http://localhost:4200/'
+    }, {
+      reload: false
+    })
   ]
 };

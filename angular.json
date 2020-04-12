@@ -18,7 +18,7 @@
           "builder": "@angular-builders/custom-webpack:browser",
           "options": {
             "customWebpackConfig": {
-              "path": "./configs/postcss.config.js"
+              "path": "./configs/webpack.config.js"
             },
             "outputPath": "dist/angular-environment",
             "index": "src/index.html",
@@ -52,7 +52,7 @@
               "vendorChunk": false,
               "buildOptimizer": true,
               "customWebpackConfig": {
-                "path": "./configs/postcss.config.prod.js"
+                "path": "./configs/webpack.config.prod.js"
               },
               "budgets": [
                 {
@@ -90,7 +90,7 @@
           "builder": "@angular-builders/custom-webpack:karma",
           "options": {
             "customWebpackConfig": {
-              "path": "./configs/postcss.config.prod.js"
+              "path": "./configs/webpack.config.prod.js"
             },
             "main": "src/test.ts",
             "polyfills": "src/polyfills.ts",
